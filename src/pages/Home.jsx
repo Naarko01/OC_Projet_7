@@ -13,7 +13,7 @@ function Home() {
 		async function fetchHousing() {
 			setIsLoading(true);
 			try {
-				const response = await fetch("../data/housing.json");
+				const response = await fetch("/data/housing.json");
 				const housingList = await response.json();
 				setHousingList(housingList);
 			} catch (err) {
