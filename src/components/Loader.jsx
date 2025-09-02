@@ -3,7 +3,7 @@ import "../styles/Loader.scss";
 function Loader() {
 	return (
 		<div className="loaderWrapper">
-			<div className="loader"></div>
+			<div className="loader">Chargement des données</div>
 		</div>
 	);
 }

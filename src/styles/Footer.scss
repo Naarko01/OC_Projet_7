@@ -1,0 +1,28 @@
+.footer {
+   margin: 0;
+   display: flex;
+   background-color: black;
+   justify-content: center;
+   align-items: flex-end;
+   width: 100%;
+   height: 209px;
+
+   &_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &--img {
+         color: white;
+         width: 122px;
+         height: 39.4px;
+      }
+      &--text {
+         margin-bottom: 29px;
+         margin-top: 29px;
+         color: white;
+         font-size: 24px;
+         font-weight: 400;
+      }
+   }
+}

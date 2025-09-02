@@ -20,7 +20,9 @@ function Home() {
 				console.log(err);
 				setError(true);
 			} finally {
-				setIsLoading(false);
+				setTimeout(() => {
+					setIsLoading(false);
+				}, 1500);
 			}
 		}
 		fetchHousing();
@@ -46,6 +48,7 @@ function Home() {
 							key={housing.id}
 							title={housing.title}
 							coverUrl={housing.cover}
+							id={housing.id}
 						/>
 					))}
 				</section>
