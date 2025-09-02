@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
-import Loader from "../components/Loader";
-import HousingCard from "../components/HousingCard";
+import { HousingCard, Banner } from "../components";
 import homeBg from "../assets/home_bg.png";
+import data from "../data/housing.json";
 import "../styles/Home.scss";
 
 function Home() {
-	const [isLoading, setIsLoading] = useState(false);
-	const [housingList, setHousingList] = useState([]);
-	const [error, setError] = useState(null);
+	const housingList = data;
+	const bannerTitle = "Chez vous, partout et ailleurs";
 
+	/*
 	useEffect(() => {
 		async function fetchHousing() {
 			setIsLoading(true);
@@ -26,33 +25,21 @@ function Home() {
 			}
 		}
 		fetchHousing();
-	}, []);
+	}, []);*/
 
 	return (
 		<main>
-			<section className="bgContainer">
-				<img src={homeBg} alt="" />
-				<p>Chez vous, partout et ailleurs</p>
-				<div className="filter"></div>
+			<Banner imgSrc={homeBg} title={bannerTitle} />
+			<section className="housingList">
+				{housingList.map((housing) => (
+					<HousingCard
+						key={housing.id}
+						title={housing.title}
+						coverUrl={housing.cover}
+						id={housing.id}
+					/>
+				))}
 			</section>
-			{error ? (
-				<div className="fetchError">
-					Erreur lors de la récupération des données
-				</div>
-			) : isLoading ? (
-				<Loader />
-			) : (
-				<section className="housingList">
-					{housingList.map((housing) => (
-						<HousingCard
-							key={housing.id}
-							title={housing.title}
-							coverUrl={housing.cover}
-							id={housing.id}
-						/>
-					))}
-				</section>
-			)}
 		</main>
 	);
 }
