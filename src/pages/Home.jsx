@@ -25,7 +25,8 @@ function Home() {
 			}
 		}
 		fetchHousing();
-	}, []);*/
+	}, []);
+	*/
 
 	return (
 		<main>
