@@ -13,6 +13,7 @@ createRoot(document.getElementById("root")).render(
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
 				<Route path="/housing/:id" element={<Housing />} />
+				<Route path="/error" element={<ErrorPage />} />
 				<Route path="*" element={<ErrorPage />} />
 			</Routes>
 			<Footer />
