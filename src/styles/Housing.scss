@@ -1,0 +1,75 @@
+@use "./Global.scss" as *;
+
+.info {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+
+   &Housing {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      .title {
+         color: $primaryColor;
+         font-size: 36px;
+         font-weight: 500;
+         margin: 30px 0 0 0;
+      }
+
+      .location {
+         margin: 0 0 20px 0;
+         font-size: 18px;
+         font-weight: 500;
+      }
+
+      .tagList {
+         display: flex;
+         margin-bottom: 24px;
+
+         .tag {
+            width: 115px;
+            height: 22px;
+            text-align: center;
+            padding-top: 3px;
+            background-color: $primaryColor;
+            border-radius: 10px;
+            margin-right: 10px;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+         }
+      }
+   }
+
+   &Host {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+
+      .hostName {
+         color: $primaryColor;
+         font-size: 18px;
+         font-weight: 500;
+         max-width: 96px;
+         text-align: end;
+         margin: 30px 10px 27px 0;
+      }
+
+      .hostPicture {
+         width: 64px;
+         height: 64px;
+         border-radius: 50%;
+         margin-top: 24px;
+      }
+   }
+}
+
+.details {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 76px;
+   margin-bottom: 50px;
+}

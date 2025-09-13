@@ -1,0 +1,74 @@
+@use "../styles/Global.scss" as *;
+
+.dropdown {
+   max-height: 52px;
+   width: 100%;
+   overflow: hidden;
+   transition: max-height 0.3s ease-in;
+
+   &.expanded {
+      max-height: 279px;
+
+      .topbar img {
+         transform: rotate(-180deg);
+      }
+   }
+
+   .topbar {
+      display: flex;
+      z-index: 2;
+      position: relative;
+      height: 52px;
+      width: 100%;
+      background-color: $primaryColor;
+      border-radius: 10px;
+      transition: border-radius 0.3s ease-in;
+
+      &:has(+ .open) {
+         border-bottom-left-radius: 0;
+         border-bottom-right-radius: 0;
+      }
+
+      h3 {
+         color: white;
+         font-size: 18px;
+         font-weight: 700;
+         margin: 15px 0 0 10px;
+      }
+
+      img {
+         position: absolute;
+         width: 24px;
+         height: 14px;
+         top: 20.3px;
+         right: 24px;
+         transform: rotate(0);
+         transition: transform 0.3s ease-in;
+      }
+   }
+
+   .content {
+      z-index: 1;
+      width: calc(100% - 40px);
+      background-color: #f6f6f6;
+      padding: 16px 20px 20px 20px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in;
+
+      &.open {
+         transform: translateY(0);
+      }
+
+      p {
+         padding: 0;
+         margin: 0;
+      }
+      ul {
+         margin: 0;
+         padding: 0;
+         list-style: none;
+      }
+   }
+}
