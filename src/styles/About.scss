@@ -1,0 +1,15 @@
+.aboutBannerContainer {
+   margin-bottom: 38px;
+}
+
+.dropdownList {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   align-items: center;
+
+   .dropdownElement {
+      width: 82.5%;
+      margin-bottom: 30px;
+   }
+}

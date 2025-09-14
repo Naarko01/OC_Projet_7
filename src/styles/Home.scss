@@ -3,15 +3,19 @@ main {
    display: flex;
    flex-direction: column;
    justify-content: center;
-}
 
-.housingList {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   padding: 56px 50px 43px 50px;
-   background-color: #f6f6f6;
-   row-gap: 60px;
-   column-gap: 50px;
-   border-radius: 25px;
-   margin-bottom: 50px;
+   .homeBannerContainer {
+      margin-bottom: 43px;
+   }
+
+   .housingList {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 56px 50px 43px 50px;
+      background-color: #f6f6f6;
+      row-gap: 60px;
+      column-gap: 50px;
+      border-radius: 25px;
+      margin-bottom: 50px;
+   }
 }

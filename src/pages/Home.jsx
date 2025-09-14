@@ -30,7 +30,9 @@ function Home() {
 
 	return (
 		<main>
-			<Banner imgSrc={homeBg} title={bannerTitle} />
+			<div className="homeBannerContainer">
+				<Banner imgSrc={homeBg} title={bannerTitle} />
+			</div>
 			<section className="housingList">
 				{housingList.map((housing) => (
 					<HousingCard
