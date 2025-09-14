@@ -30,10 +30,10 @@
          margin-bottom: 24px;
 
          .tag {
-            width: 115px;
+            min-width: 115px;
             height: 22px;
             text-align: center;
-            padding-top: 3px;
+            padding: 3px 20px 0 20px;
             background-color: $primaryColor;
             border-radius: 10px;
             margin-right: 10px;
@@ -48,14 +48,19 @@
       width: 30%;
       display: flex;
       justify-content: flex-end;
+      flex-wrap: wrap;
+      align-content: flex-start;
 
       .hostName {
          color: $primaryColor;
          font-size: 18px;
          font-weight: 500;
-         max-width: 96px;
+         max-width: 90px;
          text-align: end;
-         margin: 30px 10px 27px 0;
+         margin: 0;
+         padding-top: 30px;
+         padding-right: 10px;
+         height: 52px;
       }
 
       .hostPicture {
@@ -63,6 +68,21 @@
          height: 64px;
          border-radius: 50%;
          margin-top: 24px;
+      }
+
+      .notation {
+         width: 100%;
+         display: flex;
+         justify-content: flex-end;
+         margin-top: 21px;
+
+         i {
+            color: #e3e3e3;
+            font-size: 24px;
+         }
+         .rated {
+            color: $primaryColor;
+         }
       }
    }
 }

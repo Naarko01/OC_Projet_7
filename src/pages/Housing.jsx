@@ -8,6 +8,7 @@ function Housing() {
 	const { id } = useParams();
 	let navigate = useNavigate();
 	const targetedObj = data.find((element) => element.id === id);
+	const maxRating = 5;
 
 	useEffect(() => {
 		if (!targetedObj) {
@@ -37,7 +38,16 @@ function Housing() {
 						alt=""
 						className="hostPicture"
 					/>
-					<div className="notation"></div> {/* va devenir un component*/}
+					<div className="notation">
+						{[...Array(maxRating)].map((_, index) => (
+							<i
+								key={index}
+								className={`fa-solid fa-star${
+									index < targetedObj.rating ? " rated" : ""
+								}`}
+							></i>
+						))}
+					</div>
 				</div>
 			</section>
 			<section className="details">
