@@ -1,3 +1,5 @@
+import "../styles/Banner.scss";
+
 function Banner({ imgSrc, title }) {
 	return (
 		<section className="bgContainer">
