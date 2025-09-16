@@ -28,8 +28,8 @@ main {
       grid-template-columns: repeat(3, 1fr);
       padding: 56px 50px 43px 50px;
       background-color: #f6f6f6;
-      row-gap: 60px;
-      column-gap: 50px;
+      row-gap: 50px;
+      column-gap: 60px;
       border-radius: 25px;
       margin-bottom: 50px;
 
@@ -39,6 +39,7 @@ main {
 
       @media (min-width: 375px) and (max-width: 768px) {
          grid-template-columns: repeat(1, 1fr);
+         row-gap: 20px;
          padding: 0;
          background-color: white;
          margin-bottom: 22px;

@@ -1,5 +1,9 @@
 .aboutBannerContainer {
    margin-bottom: 38px;
+
+   @media (min-width: 375px) and (max-width: 768px) {
+      margin-bottom: 20px;
+   }
 }
 
 .dropdownList {
@@ -11,5 +15,10 @@
    .dropdownElement {
       width: 82.5%;
       margin-bottom: 30px;
+
+      @media (min-width: 375px) and (max-width: 768px) {
+         width: 100%;
+         margin-bottom: 20px;
+      }
    }
 }

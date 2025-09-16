@@ -26,7 +26,7 @@ function Housing() {
 					<div className="tagList">
 						{targetedObj.tags.map((tag) => (
 							<div className="tag" key={`${id}-${tag}`}>
-								{tag}
+								{tag.split(" ")[0]}
 							</div>
 						))}
 					</div>
@@ -35,7 +35,7 @@ function Housing() {
 					<p className="hostName">{targetedObj.host.name}</p>
 					<img
 						src={targetedObj.host.picture}
-						alt=""
+						alt="photo du propriétaire"
 						className="hostPicture"
 					/>
 					<div className="notation">
@@ -51,8 +51,12 @@ function Housing() {
 				</div>
 			</section>
 			<section className="details">
-				<DropDown id={id} utility={"description"} />
-				<DropDown id={id} utility={"equipments"} />
+				<DropDown content={targetedObj.description} title={"Description"} />
+				<DropDown
+					content={targetedObj.equipments}
+					title={"Équipements"}
+					isList={true}
+				/>
 			</section>
 		</main>
 	) : null;

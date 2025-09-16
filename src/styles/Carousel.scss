@@ -7,6 +7,10 @@
    align-items: center;
    justify-content: center;
 
+   @media (min-width: 375px) and (max-width: 768px) {
+      height: 255px;
+   }
+
    .carouselContent {
       object-fit: cover;
       object-position: center;
@@ -15,6 +19,10 @@
       height: 100%;
       position: absolute;
       border-radius: 25px;
+
+      @media (min-width: 375px) and (max-width: 768px) {
+         border-radius: 10px;
+      }
    }
 
    .leftArrow {
@@ -22,6 +30,18 @@
       left: 23.36px;
       top: 156.7px;
       cursor: pointer;
+
+      @media (min-width: 375px) and (max-width: 768px) {
+         left: 5.84px;
+         top: 118.1px;
+      }
+
+      img {
+         @media (min-width: 375px) and (max-width: 768px) {
+            width: 11.67px;
+            height: 19.8px;
+         }
+      }
    }
 
    .rightArrow {
@@ -29,6 +49,18 @@
       right: 23.36px;
       top: 156.7px;
       cursor: pointer;
+
+      @media (min-width: 375px) and (max-width: 768px) {
+         right: 5.84px;
+         top: 118.1px;
+      }
+
+      img {
+         @media (min-width: 375px) and (max-width: 768px) {
+            width: 11.67px;
+            height: 19.8px;
+         }
+      }
    }
 
    .counter {
@@ -39,5 +71,9 @@
       color: white;
       font-size: 18px;
       font-weight: 500;
+
+      @media (min-width: 375px) and (max-width: 768px) {
+         display: none;
+      }
    }
 }
