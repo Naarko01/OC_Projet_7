@@ -7,9 +7,43 @@ $primaryColor: #ff6060;
 * {
    font-family: "Montserrat", sans-serif;
 }
+html {
+   min-height: 100vh;
+}
 
 body {
-   max-width: 1440px;
+   margin: 0;
+}
+
+#root {
    margin: auto;
    box-sizing: border-box;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+
+   main {
+      margin: 0 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 1440px;
+
+      @media (min-width: 1440.5px) {
+         margin-left: max(100px, calc((100vw - 1440px) / 2));
+         margin-right: max(100px, calc((100vw - 1440px) / 2));
+      }
+
+      @media (min-width: 1024px) and (max-width: 1438px) {
+         margin: 0 75px;
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+         margin: 0 50px;
+      }
+
+      @media (min-width: 375px) and (max-width: 768px) {
+         margin: 0 20px;
+      }
+   }
 }
