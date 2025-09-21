@@ -58,6 +58,7 @@
          right: 24px;
          transform: rotate(0);
          transition: transform 0.3s ease-out;
+         cursor: pointer;
 
          @media (min-width: 375px) and (max-width: 768px) {
             top: 10.29px;
