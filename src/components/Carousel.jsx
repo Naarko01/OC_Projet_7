@@ -21,7 +21,7 @@ function Carousel({ id }) {
 
 	return (
 		<div className="carousel">
-			{imgListLength !== 1 ? (
+			{imgListLength > 1 ? (
 				<>
 					<div className="leftArrow" onClick={() => handleClick(true)}>
 						<img src={leftArrow} alt="flèche gauche" />
@@ -36,7 +36,7 @@ function Carousel({ id }) {
 				src={targetedObj.pictures[counter]}
 				alt="photo de l'apartement"
 			/>
-			{imgListLength !== 1 ? (
+			{imgListLength > 1 ? (
 				<p className="counter">{`${counter + 1}/${imgListLength}`}</p>
 			) : null}
 		</div>
