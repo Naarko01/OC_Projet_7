@@ -21,18 +21,24 @@ function Carousel({ id }) {
 
 	return (
 		<div className="carousel">
-			<div className="leftArrow" onClick={() => handleClick(true)}>
-				<img src={leftArrow} alt="flèche gauche" />
-			</div>
-			<div className="rightArrow" onClick={() => handleClick(false)}>
-				<img src={rightArrow} alt="flèche droite" />
-			</div>
+			{imgListLength !== 1 ? (
+				<>
+					<div className="leftArrow" onClick={() => handleClick(true)}>
+						<img src={leftArrow} alt="flèche gauche" />
+					</div>
+					<div className="rightArrow" onClick={() => handleClick(false)}>
+						<img src={rightArrow} alt="flèche droite" />
+					</div>
+				</>
+			) : null}
 			<img
 				className="carouselContent"
 				src={targetedObj.pictures[counter]}
 				alt="photo de l'apartement"
 			/>
-			<p className="counter">{`${counter + 1}/${imgListLength}`}</p>
+			{imgListLength !== 1 ? (
+				<p className="counter">{`${counter + 1}/${imgListLength}`}</p>
+			) : null}
 		</div>
 	);
 }
