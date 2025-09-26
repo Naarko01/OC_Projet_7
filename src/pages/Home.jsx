@@ -4,7 +4,6 @@ import data from "../data/housing.json";
 import "../styles/Home.scss";
 
 function Home() {
-	const housingList = data;
 	const bannerTitle = "Chez vous, partout et ailleurs";
 
 	return (
@@ -13,7 +12,7 @@ function Home() {
 				<Banner imgSrc={homeBg} title={bannerTitle} />
 			</div>
 			<section className="housingList">
-				{housingList.map((housing) => (
+				{data.map((housing) => (
 					<HousingCard
 						key={housing.id}
 						title={housing.title}
